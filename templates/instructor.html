@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    *{
+    font-family:poppins;
+    }
+        .form{
+        position:relative;
+        top:90px;
+        background-color:#4c138c ;
+        width:450px;
+        height:500px;
+        margin-left:auto;
+        margin-right:auto;
+        color:white;
+        font-family: poppins;
+        padding: 20px 50px;
+
+        }
+
+        .payment-btn{
+        width:200px;
+        padding:10px;
+        border-radius:10px;
+        background-color:orange;
+        }
+
+.navbar{
+            display: flex;
+            background-color: white;
+            justify-content: space-between;
+            padding: 10px 200px;
+            opacity: 0.9;
+            width: 100%;
+            height:40px;
+            position: fixed;
+               top: 0;
+               left: 0;
+               right: 0;
+
+            z-index:1;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          }
+
+main{
+
+display:flex;
+flex-direction:column;
+gap:50px;
+margin-top:100px;
+}
+.course{
+width:400px;
+padding:20px;
+background-color:#DCB0FF;
+
+}
+
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+        <img src="{% static 'elearning/img/logo.png'%}" width=120px height=30px style="display:flex;">
+
+      <div class="navlinks">
+          <p>Welcome </p>
+          <a href="{% url 'index'%}" class="homebtn-register"></a>
+          <a class="login-btn-registerpage" href="{% url 'login' %}">Logout</a>
+
+      </div>
+    </nav>
+
+<main>
+
+    <section class="course-title">
+    <div class="course">Add Course</div><br>
+    <div class="course">Update Course</div><br>
+    </section>
+    <div class="course-content"></div>
+
+</main>
+</body>
+</html>

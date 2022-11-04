@@ -1,0 +1,92 @@
+
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .form{
+        position:relative;
+        top:90px;
+        background-color:#4c138c ;
+        width:450px;
+        height:500px;
+        margin-left:auto;
+        margin-right:auto;
+        color:white;
+        font-family: poppins;
+        padding: 20px 50px;
+
+        }
+
+        .payment-btn{
+        width:200px;
+        padding:10px;
+        border-radius:10px;
+        background-color:orange;
+        }
+body{
+background-color:#DCB0FF;
+
+}
+.navbar{
+            display: flex;
+            background-color: white;
+            justify-content: space-between;
+            padding: 10px 200px;
+            opacity: 0.9;
+            width: 100%;
+            height:40px;
+            position: fixed;
+               top: 0;
+               left: 0;
+               right: 0;
+
+            z-index:1;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          }
+
+
+
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+        <img src="{% static 'elearning/img/logo.png'%}" width=120px height=30px style="display:flex;">
+
+      <div class="navlinks">
+          <a href="{% url 'index'%}" class="homebtn-register">Home</a>
+          <a class="login-btn-registerpage" href="{% url 'login' %}">Login</a>
+
+      </div>
+    </nav>
+
+
+<section class="form">
+<h1>MAKE PAYMENT</h1>
+
+<h2>Billing address</h2>
+<span>Country</span>
+<select>
+    <option>Rwanda</option>
+    <option>Kenya</option>
+    <option>Uganda</option>
+    <option>Tanzania</option>
+    <option>Burundi</option>
+</select>
+
+<h2>Payment method</h2>
+<input type="radio" value="1" name="11">MTN Momo <br>
+<input type="radio" value="12" name="11">Airtel Money<br>
+<input type="radio" value="1123" name="11">Visa <br>
+<input type="radio" value="1234" name="11">MasterCard<br>
+<h2>Order</h2>
+<p>Business Essentials<span>5$</span></p>
+    <div class="payment-btn">
+        Complete Payment
+    </div>
+</section>
+</body>
+</html>
